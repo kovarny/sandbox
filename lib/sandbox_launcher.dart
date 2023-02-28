@@ -30,9 +30,9 @@ class _SandboxLauncherState extends State<SandboxLauncher> {
     super.initState();
     if (widget.getInitialState != null) {
       widget.getInitialState!().then((value) {
-        if (value != null && value['sandbox'] != null) {
+        if (value != null && value != null) {
           setState(() {
-            _isSandbox = value['sandbox'];
+            _isSandbox = value;
           });
         }
       });
